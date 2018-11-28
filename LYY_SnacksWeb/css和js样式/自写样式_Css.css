@@ -1,0 +1,103 @@
+﻿#header{
+    width:auto;height:auto;background:#808080;
+    font:300;
+}
+
+#dropdown{
+    float:right;
+    color:#00ffff;
+    text-align:right;
+    width:100px;
+    height:60px;
+}
+#dropdown-menu{
+    width:900px;
+    height:28px;
+    text-align:center;
+}
+#table{
+
+    text-align:center;
+}
+#button{
+    text-align:center;
+    width:auto;
+    height:auto;
+}
+#menu{                     
+    padding-left:100px;
+    margin:auto;
+    text-align:center;
+    width:100%;
+    height:60px;
+  background:#ff6a00;
+    border:1px solid ;
+}
+#menu ul{
+    margin:0px;
+    padding:0px;
+}
+#submenu{
+    width:900px;
+    height:28px;
+    text-align:center;
+}
+#menu ul li{
+    height:30px;
+    width:115px;
+    list-style:none;
+    float:left;
+    display:inline;
+    font:0.9em Arial,Helvetica,sans-serif;
+    text-align:center;
+}
+ul li a{
+   
+    width:114px;
+    margin:0px;
+    padding:0px 8px;
+    text-decoration:none;
+    display:block;
+   
+    line-height:29px;
+    border-bottom:1px solid ;
+
+}
+ul li #submenu ul li{
+    height:25px;
+}
+ul li #submenu ul li a{
+
+    line-height:24px;
+}
+ul li a:hover{
+   
+    border-bottom:1px dashed 
+}
+ul li #submenu{
+    display:none;
+}
+#submenu ul li{
+    height:24px;
+    width:113px;
+    list-style:none;
+    float:left;
+    display:inline;
+    font:0.8em Arial,Helvetica,sans-serif;
+    text-align:center;
+}
+ul li:hover #submenu{
+    display:block;
+}
+ul li #submenu ul li a:hover{
+   
+}
+#search{
+    width:785px;
+    height:80px;
+    float:right;
+}
+#logo{
+    width:200px;height:100px;float:right;
+    
+}

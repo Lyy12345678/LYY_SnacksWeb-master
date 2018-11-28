@@ -1,0 +1,874 @@
+﻿@model LYY_SnacksWeb.Models.Users
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<style>
+     .logo img{
+        float:left;
+        margin-top:20px;
+       margin-right:100px;
+    }
+     .logo p{
+         font-family:Arial;
+         float:left;
+         font-size:medium;
+         font-style:oblique;
+       margin-left:50px;
+     }
+    .u-g-search input {
+        line-height:2;
+         color:cornflowerblue;
+      font-size:medium;
+        float: left;
+        margin-top:40px;
+        margin-left:250px;
+    }
+     .u-g-search button {
+         font-size:medium;
+         color:cornflowerblue;
+        float:left;
+        margin-top:45px;
+        margin-left:20px;
+     
+    }
+
+     .u-g-search ul {
+        float: left;
+        margin-top:20px;
+          margin-top:10px;
+        margin-left:250px;
+    }
+</style>
+<style>
+    .shouye {
+        background-color:#ffffff;
+    }
+</style>
+<body class="shouye">
+    
+    <div class="logo">
+        <img src="~/images/4.jpg" LYY SnacksWeb width="150" height="100" />
+
+        <div class="u-g-search">
+            <input name="q" type="text" size="400" value="请输入关键字">
+            <button class="s-btn fl J_btn_search" style="text-align:center" type="submit">找零食</button>
+            <br />
+
+            <ul class="rmss">
+                <a href="">水果</a>
+
+                <a href="">海苔</a>
+
+                <a href="">果冻</a>
+
+                <a href="">辣条</a>
+
+                <a href="">薯片</a>
+
+                <a href="">糖果</a>
+
+                <a href="">牛奶</a>
+
+            </ul>
+        </div>
+
+    </div>
+
+
+
+    <link href="~/yangshi/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/yangshi/bootstrap.min.js"></script>
+    <script src="~/yangshi/jquery.min.js"></script>
+    <link href="~/css和js样式/自写样式_Css.css" rel="stylesheet" />
+    <style>
+        .DZ a {
+            float:left;
+            margin-right:50px;
+            margin-top:50px;
+            font-size: medium;
+            font-style: oblique;
+        }
+        .d{
+            margin:0;
+        }
+        .DZ select {
+            float: left;
+            /*margin-right: 250px;*/
+             margin-top:50px;
+            font-size: medium;
+            font-style: normal;
+        }
+    </style>
+    <div class="DZ" style="box-sizing:content-box">
+        <a href="#">您来自哪个城市：</a>
+        <select>
+            <optgroup label="江西省">
+                <option value="南昌市">南昌市</option>
+                <option value="赣州市" selected="selected">赣州市</option>
+                <option value="上饶市">上饶市</option>
+            </optgroup>
+            <optgroup label="广东省">
+                <option value="广州市" selected="selected">广州市</option>
+                <option value="深圳市">深圳市</option>
+                <option value="佛山市">佛山市</option>
+            </optgroup>
+        </select>
+    </div>
+
+    <styl>
+      
+    </styl>
+
+
+    <div>
+
+        <ul class="@*nav*@ nav-tabs">
+
+            <li>
+                    <nav class="navbar navbar-default" role="navigation">
+                        <div class="container-fluid" style="background:padding-box">
+                            <div class="navbar-header">
+                                <link href="~/yangshi/Index.min.css" rel="stylesheet" />
+                                <button type="button" class="navbar-toggle" data-toggle="collapse"
+                                        data-target="#example-navbar-collapse">
+                                    <span class="sr-only">切换导航</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a class="navbar-brand" href="#">全部零食分类</a>
+
+                            </div>
+                            <div class="collapse navbar-collapse" id="example-navbar-collapse">
+                                <ul class="nav navbar-nav">
+
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                            全部零食 <b class="caret"></b>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">国内零食</a></li>
+                                            <li><a href="#">进口零食</a></li>
+                                            <li><a href="#">定制零食</a></li>
+                                            <li><a href="#">特产零食</a></li>
+                                            <li><a href="#">网红零食</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="collapse navbar-collapse" id="example-navbar-collapse">
+                                <ul class="nav navbar-nav">
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                            国内零食 <b class="caret"></b>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">坚果炒货</a></li>
+                                            <li><a href="#">饼干糕点</a></li>
+                                            <li><a href="#">糖果巧克力</a></li>
+                                            <li><a href="#">肉类制品</a></li>
+                                            <li><a href="#">海味零食</a></li>
+                                            <li><a href="#">膨化零食</a></li>
+                                            <li><a href="#">饮料/罐头/牛奶</a></li>
+                                            <li><a href="#">速食零食</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="collapse navbar-collapse" id="example-navbar-collapse">
+                                <ul class="nav navbar-nav">
+
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                            进口零食 <b class="caret"></b>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">日本</a></li>
+                                            <li><a href="#">新加坡</a></li>
+                                            <li><a href="#">美国</a></li>
+                                            <li><a href="#">泰国</a></li>
+
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="collapse navbar-collapse" id="example-navbar-collapse">
+                                <ul class="nav navbar-nav">
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                            特产零食 <b class="caret"></b>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">湖南</a></li>
+                                            <li><a href="#">四川</a></li>
+                                            <li><a href="#">西藏</a></li>
+                                            <li><a href="#">新疆</a></li>
+
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="collapse navbar-collapse" id="example-navbar-collapse">
+                                <ul class="nav navbar-nav">
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                            定制零食 <b class="caret"></b>
+                                        </a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#">私人订制</a></li>
+                                            <li><a href="#">企业定制</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+
+
+                        </div>
+
+                    </nav>
+
+                </li>
+
+            <li class="active"><a href="#">首页</a></li>
+
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    直播坊 <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">直播</a></li>
+
+                    <li class="divider"></li>
+
+                    <li><a href="#">录播</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    馋了么 <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">零食外卖</a></li>
+
+                    <li class="divider"></li>
+
+                    <li><a href="#">零食速递</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    零食论坛 <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">买家社</a></li>
+
+                    <li class="divider"></li>
+
+                    <li><a href="#">卖家秀</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                    零食百科 <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">零食起源说</a></li>
+
+                    <li class="divider"></li>
+
+                    <li><a href="#">零食制作篇</a></li>
+                </ul>
+            </li>
+        </ul>
+        <style>
+            .carousel-inner div {
+                width: 1200px;
+                height: 450px;
+            }
+
+            .item active img {
+                width: 1200px;
+                height: 50px;
+            }
+
+            .item img {
+                width: 1200px;
+                height: 50px;
+            }
+
+            .carousel-inner {
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+        <div id="myCarousel" class="carousel slide ">
+            <!-- 轮播（Carousel）指标 -->
+            <link href="~/yangshi/bootstrap.min.css" rel="stylesheet" />
+            <script src="~/yangshi/bootstrap.min.js"></script>
+            <script src="~/yangshi/jquery.min.js"></script>
+            <ol class="carousel-indicators" data-pause="hover" data-ride="carousel">
+                <li data-target="#myCarousel" data-ride="carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-ride="carousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-ride="carousel" data-slide-to="2"></li>
+            </ol>
+            <!-- 轮播（Carousel）项目 -->
+            <div class="carousel-inner">
+                <div class="item active">
+                    <img src="~/images/29.jpg" alt="First slide ">
+
+                    <div class="carousel-caption">糖果</div>
+                </div>
+                <div class="item">
+                    <img src="~/images/24.jpg" alt="Second slide">
+
+                    <div class="carousel-caption">巧克力</div>
+                </div>
+                <div class="item">
+                    <img src="~/images/13.jpg" alt="Third slide">
+
+                    <div class="carousel-caption">直播</div>
+                </div>
+            </div>
+            <!-- 轮播（Carousel）导航 -->
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </div>
+
+    <style>
+        .LB img {
+            width: 1140px;
+            height: 150px;
+        }
+    </style>
+    <div class="LB">
+        <img src="~/images/25.jpg" />
+    </div>
+
+    <link href="~/css和js样式/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/css和js样式/bootstrap.min.js"></script>
+    <script src="~/css和js样式/jquery.min.js"></script>
+    <link href="~/css和js样式/特价栏样式——Css.css" rel="stylesheet" />
+
+    <style>
+        .ct3 {
+            font-size: large;
+        }
+
+        .ct3_a li {
+            list-style: none;
+            float: left;
+            margin-left: 200px;
+        }
+    </style>
+    <style>
+        .ct3_b li {
+            list-style: none;
+            float: left;
+            margin-left: 120px;
+        }
+    </style>
+
+
+    <div class="ct3">
+        <ul class="ct3_a" float="left">
+            <li class="on bg" data-id="1"><a>今日特价</a><i></i></li>
+            <li class="bg" data-id="2"><a>猜你喜欢</a><i></i></li>
+            <li class="bg" data-id="3"><a>热卖推荐</a><i></i></li>
+        </ul>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('.bg').mouseover(function () {
+                    $('.bg').removeClass('on');
+                    $(this).addClass('on');
+                    $(".ct3_b").hide();
+                    $('#on' + $(this).attr('data-id')).show()
+                });
+            });
+        </script>
+        <ul class="ct3_b" style="display:block;" id="on1" float:right;
+            margin-left:25px;>
+            <li>
+                <a href=""><img src="~/images/10.jpg" width="160" height="160" /></a>
+                <a class="ct3_b_a" href="">冰棍套餐</a>
+                <span><em>商城价</em><em>25</em></span>
+            </li>
+            <li>
+                <a href=""><img src="~/images/35.jpg" width="160" height="160" /></a>
+                <a class="ct3_b_a" href="">美味糖果</a>
+                <span><em>商城价</em><em>25</em></span>
+            </li>
+            <li>
+                <a href=""><img src="~/images/24.jpg" width="160" height="160" /></a>
+                <a class="ct3_b_a" href="">巧乐兹</a>
+                <span><em>商城价</em><em>15</em></span>
+            </li>
+            <li>
+                <a href=""><img src="~/images/20.jpg" width="160" height="160" /></a>
+                <a class="ct3_b_a" href="">开心坚果</a>
+                <span><em>商城价</em><em>28</em></span>
+            </li>
+
+
+        </ul>
+        <ul class="ct3_b" style="display:none;" id="on2">
+            <li>
+                <a href=""><img src="~/images/29.jpg" width="160" height="160" /></a>
+                <a class="ct3_b_a" href="">糖果之恋</a>
+                <span><em>商城价</em><em>55</em></span>
+            </li>
+            <li>
+                <a href=""><img src="~/images/2.jpg" width="160" height="160" /></a>
+                <a class="ct3_b_a" href="">零食套餐</a>
+                <span><em>商城价</em><em>25</em></span>
+            </li>
+            <li>
+                <a href=""><img src="~/images/30.jpg" width="160" height="160" /></a>
+                <a class="ct3_b_a" href="">浓浓爱意</a>
+                <span><em>商城价</em><em>15</em></span>
+            </li>
+            <li>
+                <a href=""><img src="~/images/21.jpg" width="160" height="160" /></a>
+                <a class="ct3_b_a" href="">巧克力之乡</a>
+                <span><em>商城价</em><em>28</em></span>
+            </li>
+
+
+        </ul>
+        <ul class="ct3_b" style="display:none;" id="on3">
+            <li>
+                <a href=""><img src="~/images/3.jpg" width="160" height="160" /></a>
+                <a class="ct3_b_a" href="">蜡笔小新</a>
+                <span><em>商城价</em><em>55</em></span>
+            </li>
+            <li>
+                <a href=""><img src="~/images/29.jpg" width="160" height="160" /></a>
+                <a class="ct3_b_a" href="">糖果人生</a>
+                <span><em>商城价</em><em>25</em></span>
+            </li>
+            <li>
+                <a href=""><img src="~/images/24.jpg" width="160" height="160" /></a>
+                <a class="ct3_b_a" href="">花样巧克力</a>
+                <span><em>商城价</em><em>28</em></span>
+            </li>
+            <li>
+                <a href=""><img src="~/images/17.jpg" width="160" height="160" /></a>
+                <a class="ct3_b_a" href="">美丽坚果</a>
+                <span><em>商城价</em><em>44</em></span>
+            </li>
+        </ul>
+    </div>
+
+
+    <style>
+        .LB img {
+            width: 1140px;
+            height: 150px;
+        }
+    </style>
+    <div class="LB">
+        <img src="~/images/10.jpg" />
+    </div>
+
+    <style>
+        .ct4 {
+            float: right;
+            margin-left: 50px;
+            list-style: none;
+        }
+
+        .ct4_a_a li {
+            float: right;
+            margin-left: 50px;
+            list-style: none;
+            font-size: large;
+        }
+
+        .ct4_b {
+            float: right;
+            margin-left: 85px;
+            list-style: none;
+            font-size: medium;
+        }
+
+        .ct4_b_b li {
+            float: right;
+            margin-right: 125px;
+            list-style: none;
+            font-size: medium;
+        }
+    </style>
+
+    <link href="~/css和js样式/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/css和js样式/bootstrap.min.js"></script>
+    <script src="~/css和js样式/jquery.min.js"></script>
+    <div class="ct4">
+        <div class="ct4_a">
+            @*<span><em class="lou">A</em><em class="xie">/</em><em>健康饮品</em></span>*@
+            <ul class="ct4_a_a">
+                <li class="bl bk" data-id="1"><a href="">冰棍</a></li>
+                <li class="bk" data-id="2"><a href="">巧克力</a></li>
+                <li class="bk" data-id="3"><a href="">坚果</a></li>
+                <li class="bk" data-id="4"><a href="">薯片</a></li>
+                <li class="bk" data-id="5"><a href="">糖果</a></li>
+            </ul>
+            <script type="text/javascript">
+                $(document).ready(function () {
+                    $('.bk').mouseover(function () {
+                        $('.bk').removeClass('bl');
+                        $(this).addClass('bl');
+                        $(".ct4_b_b").hide();
+                        $('#bl' + $(this).attr('data-id')).show()
+                    });
+                });
+            </script>
+        </div>
+        <div class="ct4_b">
+
+
+            <ul class="ct4_b_b" style="display:block;" id="bl1">
+                <li>
+                    <a href=""><img src="~/images/8.jpg" width="200" height="200" /></a>
+                    <span>
+                        <a class="ct4_b_b_a" href="">老冰棍</a>
+                        <em>3</em>
+                    </span>
+                </li>
+                <li>
+                    <a href=""><img src="~/images/9.jpg" width="200" height="200" /></a>
+                    <span>
+                        <a class="ct4_b_b_a" href="">进口冰棍</a>
+                        <em>8</em>
+                    </span>
+                </li>
+                <li>
+                    <a href=""><img src="~/images/10.jpg" width="200" height="200" /></a>
+                    <span>
+                        <a class="ct4_b_b_a" href="">新冰棍</a>
+                        <em>5</em>
+                    </span>
+                </li>
+                <li>
+                    <a href=""><img src="~/images/11.jpg" width="200" height="200" /></a>
+                    <span>
+                        <a class="ct4_b_b_a" href="">很好吃的冰棍</a>
+                        <em>8</em>
+                    </span>
+                </li>
+                <li>
+                    <a href=""><img src="~/images/12.jpg" width="200" height="200" /></a>
+                    <span>
+                        <a class="ct4_b_b_a" href="">冰棍</a>
+                        <em>9.8</em>
+                    </span>
+                </li>
+                <li>
+                    <a href=""><img src="~/images/9.jpg" width="200" height="200" /></a>
+                    <span>
+                        <a class="ct4_b_b_a" href="">冰棍3</a>
+                        <em>4</em>
+                    </span>
+                </li>
+                <li>
+                    <a href=""><img src="~/images/10.jpg" width="200" height="200" /></a>
+                    <span>
+                        <a class="ct4_b_b_a" href="">冰棍2</a>
+                        <em>2.8</em>
+                    </span>
+                </li>
+
+
+            </ul>
+            <ul class="ct4_b_b" style="display:none;" id="bl2">
+                <li>
+                    <a href=""><img src="~/images/21.jpg" width="200" height="200" /></a>
+                    <span>
+                        <a class="ct4_b_b_a" href="">巧克力1</a>
+                        <em>3.2</em>
+                    </span>
+                </li>
+                <li>
+                    <a href=""><img src="~/images/22.jpg" width="200" height="200" /></a>
+                    <span>
+                        <a class="ct4_b_b_a" href="">巧克力2</a>
+                        <em>9.9</em>
+                    </span>
+                </li>
+                <li>
+                    <a href=""><img src="~/images/26.jpg" width="200" height="200" /></a>
+                    <span>
+                        <a class="ct4_b_b_a" href="">巧克力3</a>
+                        <em>82</em>
+                    </span>
+                </li>
+                <li>
+                    <a href=""><img src="~/images/24.jpg" width="200" height="200" /></a>
+                    <span>
+                        <a class="ct4_b_b_a" href="">巧克力4</a>
+                        <em>39.7</em>
+                    </span>
+                </li>
+                <li>
+                    <a href=""><img src="~/images/25.jpg" width="200" height="200" /></a>
+                    <span>
+                        <a class="ct4_b_b_a" href="">巧克力5</a>
+                        <em>72</em>
+                    </span>
+                </li>
+                <li>
+                    <a href=""><img src="~/images/26.jpg" width="200" height="200" /></a>
+                    <span>
+                        <a class="ct4_b_b_a" href="">巧克力6</a>
+                        <em>31.8</em>
+                    </span>
+                </li>
+                <li>
+                    <a href=""><img src="~/images/27.jpg" width="200" height="200" /></a>
+                    <span>
+                        <a class="ct4_b_b_a" href="">巧克力7</a>
+                        <em>44</em>
+                    </span>
+                </li>
+                <li>
+                    <a href=""><img src="~/images/28.jpg" width="200" height="200" /></a>
+                    <span>
+                        <a class="ct4_b_b_a" href="">巧克力8</a>
+                        <em>52.8</em>
+                    </span>
+                </li>
+
+            </ul>
+            <ul class="ct4_b_b" style="display:none;" id="bl3">
+                <li>
+                    <a href=""><img src="~/images/16.jpg" width="200" height="200" /></a>
+                    <span>
+                        <a class="ct4_b_b_a" href="">坚果1</a>
+                        <em>99</em>
+                    </span>
+                </li>
+                <li>
+                    <a href=""><img src="~/images/17.jpg" width="200" height="200" /></a>
+                    <span>
+                        <a class="ct4_b_b_a" href="">坚果2</a>
+                        <em>79</em>
+                    </span>
+                </li>
+                <li>
+                    <a href=""><img src="~/images/18.jpg" width="200" height="200" /></a>
+                    <span>
+                        <a class="ct4_b_b_a" href="">坚果3</a>
+                        <em>68</em>
+                    </span>
+                </li>
+                <li>
+                    <a href=""><img src="~/images/19.jpg" width="200" height="200" /></a>
+                    <span>
+                        <a class="ct4_b_b_a" href="">坚果4</a>
+                        <em>399</em>
+                    </span>
+                </li>
+                <li>
+                    <a href=""><img src="~/images/20.jpg" width="200" height="200" /></a>
+                    <span>
+                        <a class="ct4_b_b_a" href="">坚果5</a>
+                        <em>99</em>
+                    </span>
+                </li>
+                <li>
+                    <a href=""><img src="~/images/17.jpg" width="200" height="200" /></a>
+                    <span>
+                        <a class="ct4_b_b_a" href="">坚果6</a>
+                        <em>139</em>
+                    </span>
+                </li>
+                <li>
+                    <a href=""><img src="~/images/18.jpg" width="200" height="200" /></a>
+                    <span>
+                        <a class="ct4_b_b_a" href="">坚果7</a>
+                        <em>368</em>
+                    </span>
+                </li>
+                <li>
+                    <a href=""><img src="~/images/19.jpg" width="200" height="200" /></a>
+                    <span>
+                        <a class="ct4_b_b_a" href="">坚果8</a>
+                        <em>338</em>
+                    </span>
+                </li>
+
+            </ul>
+            <ul class="ct4_b_b" style="display:none;" id="bl4">
+                <li>
+                    <a href=""><img src="~/images/6.jpg" width="200" height="200" /></a>
+                    <span>
+                        <a class="ct4_b_b_a" href="">薯片1</a>
+                        <em>99</em>
+                    </span>
+                </li>
+                <li>
+                    <a href=""><img src="~/images/7.jpg" width="200" height="200" /></a>
+                    <span>
+                        <a class="ct4_b_b_a" href="/">薯片2</a>
+                        <em>102</em>
+                    </span>
+                </li>
+
+            </ul>
+            <ul class="ct4_b_b" style="display:none;" id="bl5">
+                <li>
+                    <a href=""><img src="~/images/29.jpg" width="200" height="200" /></a>
+                    <span>
+                        <a class="ct4_b_b_a" href="">糖果1</a>
+                        <em>29.9</em>
+                    </span>
+                </li>
+                <li>
+                    <a href=""><img src="~/images/30.jpg" width="200" height="200" /></a>
+                    <span>
+                        <a class="ct4_b_b_a" href="">糖果2</a>
+                        <em>38.5</em>
+                    </span>
+                </li>
+                <li>
+                    <a href=""><img src="~/images/31.jpg" width="200" height="200" /></a>
+                    <span>
+                        <a class="ct4_b_b_a" href="">糖果3</a>
+                        <em>39.9</em>
+                    </span>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+
+
+    <style>
+        .LB img {
+            width: 1140px;
+            height: 150px;
+        }
+    </style>
+    <div class="LB">
+        <img src="~/images/7.jpg" />
+    </div>
+
+    <style>
+        .ct5 {
+            font-size: large;
+        }
+
+        .ct5_a li {
+            list-style: none;
+            float: left;
+            margin-left: 200px;
+        }
+    </style>
+    <style>
+        .ct5_b li {
+            list-style: none;
+            float: left;
+            margin-left: 120px;
+        }
+    </style>
+    <link href="~/css和js样式/bootstrap.min.css" rel="stylesheet" />
+    <script src="~/css和js样式/bootstrap.min.js"></script>
+    <script src="~/css和js样式/jquery.min.js"></script>
+
+    <div class="ct5">
+        <ul class="ct5_a" float="right">
+            <li class="on ag" data-id="4"><a>热播推荐</a><i></i></li>
+            <li class="ag" data-id="5"><a>外卖小当家</a><i></i></li>
+            <li class="ag" data-id="6"><a>火热论坛</a><i></i></li>
+        </ul>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $('.ag').mouseover(function () {
+                    $('.ag').removeClass('on');
+                    $(this).addClass('on');
+                    $(".ct5_b").hide();
+                    $('#on' + $(this).attr('data-id')).show()
+                });
+            });
+        </script>
+        <ul class="ct5_b" style="display:block;" id="on4" float:right;
+            margin-left:25px;>
+            <li>
+                <a href=""><img src="~/images/1.jpg" width="160" height="160" /></a>
+                <a class="ct5_b_a" href="">不二著家的直播</a>
+                <span><em>播放量</em><em>15055</em></span>
+            </li>
+            <li>
+                <a href=""><img src="~/images/3.jpg" width="160" height="160" /></a>
+                <a class="ct5_b_a" href="">蜡笔小新的开心播客</a>
+                <span><em>播放量</em><em>15332</em></span>
+            </li>
+            <li>
+                <a href=""><img src="~/images/13.jpg" width="160" height="160" /></a>
+                <a class="ct5_b_a" href="">吃货直播</a>
+                <span><em>播放量</em><em>22522</em></span>
+            </li>
+            <li>
+                <a href=""><img src="~/images/14.jpg" width="160" height="160" /></a>
+                <a class="ct5_b_a" href="">樱桃小丸子直播</a>
+                <span><em>播放量</em><em>15228</em></span>
+            </li>
+
+
+        </ul>
+        <ul class="ct5_b" style="display:none;" id="on5">
+            <li>
+                <a href=""><img src="~/images/5.jpg" width="160" height="160" /></a>
+                <a class="ct5_b_a" href="">最美蛋糕</a>
+                <span><em>月销量</em><em>2515</em></span>
+            </li>
+            <li>
+                <a href=""><img src="~/images/15.jpg" width="160" height="160" /></a>
+                <a class="ct5_b_a" href="">惬意咖啡</a>
+                <span><em>月销量</em><em>2215</em></span>
+            </li>
+            <li>
+                <a href=""><img src="~/images/22.jpg" width="160" height="160" /></a>
+                <a class="ct5_b_a" href="">最美甜点</a>
+                <span><em>月销量</em><em>2605</em></span>
+            </li>
+            <li>
+                <a href=""><img src="~/images/11.jpg" width="160" height="160" /></a>
+                <a class="ct5_b_a" href="">冰棍之恋</a>
+                <span><em>月销量</em><em>2258</em></span>
+            </li>
+
+
+        </ul>
+        <ul class="ct5_b" style="display:none;" id="on6">
+            <li>
+                <a href=""><img src="~/images/33.jpg" width="160" height="160" /></a>
+                <a class="ct3_b_a" href="">糖果帖</a>
+                <span><em>热度</em><em>2555</em></span>
+            </li>
+            <li>
+                <a href=""><img src="~/images/27.jpg" width="160" height="160" /></a>
+                <a class="ct5_b_a" href="">巧克力帖</a>
+                <span><em>热度</em><em>2506</em></span>
+            </li>
+            <li>
+                <a href=""><img src="~/images/19.jpg" width="160" height="160" /></a>
+                <a class="ct5_b_a" href="">坚果帖</a>
+                <span><em>热度</em><em>2895</em></span>
+            </li>
+            <li>
+                <a href=""><img src="~/images/9.jpg" width="160" height="160" /></a>
+                <a class="ct5_b_a" href="">冰棍帖</a>
+                <span><em>热度</em><em>4504</em></span>
+            </li>
+        </ul>
+    </div>
+</body>
