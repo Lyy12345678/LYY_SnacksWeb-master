@@ -12,11 +12,15 @@ namespace LYY_SnacksWeb.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class Saler
+    public partial class WordReply
     {
-        public int Saler_id { get; set; }
-        public string SalerName { get; set; }
-        public int PassWord { get; set; }
-        public string Sex { get; set; }
+        public int ReplyID { get; set; }
+        public Nullable<System.DateTime> Replytime { get; set; }
+        public string UserID { get; set; }
+        public int LeaveID { get; set; }
+        public string ReplyContent { get; set; }
+    
+        public virtual LeaveWords LeaveWords { get; set; }
+        public virtual Users Users { get; set; }
     }
 }

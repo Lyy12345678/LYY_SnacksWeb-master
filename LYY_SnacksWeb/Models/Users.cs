@@ -11,26 +11,57 @@ namespace LYY_SnacksWeb.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class Users
     {
-        public int UserId { get; set; }
-        [Required(ErrorMessage ="用户类型不为空。")]
-        public string Usertype { get; set; }
-        [Required(ErrorMessage ="用户名是必须的。")]
-        [StringLength(10,MinimumLength =3)]
-        public string UserName { get; set; }
-        [StringLength(12,MinimumLength =6)]
-        [Required(ErrorMessage ="用户密码必须包含6个字符。")]
-        public string PassWord { get; set; }
-        [Required(ErrorMessage ="请选择你的头像。")]
-        public string Photo { get; set; }
-        [Required(ErrorMessage ="请选择你的性别。")]
-        public string Sex { get; set; }
-        [Required(ErrorMessage ="请填写你的地址。")]
-        [StringLength(20,MinimumLength =6)]
-        public string Address { get; set; }
-        public bool RememberMe { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Users()
+        {
+            this.Brows = new HashSet<Brows>();
+            this.Cart = new HashSet<Cart>();
+            this.Comments = new HashSet<Comments>();
+            this.ComReply = new HashSet<ComReply>();
+            this.FavoriteGoods = new HashSet<FavoriteGoods>();
+            this.FavoriteShop = new HashSet<FavoriteShop>();
+            this.LeaveWords = new HashSet<LeaveWords>();
+            this.Orders = new HashSet<Orders>();
+            this.PostReply = new HashSet<PostReply>();
+            this.Posts = new HashSet<Posts>();
+            this.Receipt_address = new HashSet<Receipt_address>();
+            this.Shops = new HashSet<Shops>();
+            this.WordReply = new HashSet<WordReply>();
+        }
+    
+        public string UserID { get; set; }
+        public string Password { get; set; }
+        public string Role { get; set; }
+    
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Brows> Brows { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Cart> Cart { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Comments> Comments { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ComReply> ComReply { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<FavoriteGoods> FavoriteGoods { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<FavoriteShop> FavoriteShop { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<LeaveWords> LeaveWords { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Orders> Orders { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PostReply> PostReply { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Posts> Posts { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Receipt_address> Receipt_address { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Shops> Shops { get; set; }
+        public virtual UserInfo UserInfo { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<WordReply> WordReply { get; set; }
     }
 }
